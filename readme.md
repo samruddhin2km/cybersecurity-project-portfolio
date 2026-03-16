@@ -11,6 +11,7 @@ The objective of this repository is to provide an overview of real-world cyberse
 - [Threat Hunting](#2-threat-hunting)
   - [FIN7 Threat Hunting](#fin7-threat-hunting)
   - [Akira Ransomware Threat Hunting](#akira-ransomware-threat-hunting)
+  - [Additional Threat Hunting Activities](#additional-threat-hunting-activities)
 
 - [SOAR Automation](#3-soar-automation)
   - [Cyber Fraud Playbook](#cyber-fraud-playbook)
