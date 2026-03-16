@@ -496,3 +496,26 @@ The vulnerability management process helped ensure that:
 - Critical vulnerabilities were prioritised and remediated quickly
 - Cross-team coordination improved remediation efficiency
 - Regular scanning and verification maintained a strong security posture across both cloud and on-premise infrastructure
+
+
+---
+
+## 5. Security Control Administration (SCA)
+
+### Zscaler Proxy – URL Policy Optimization Project
+
+As part of Security Control Administration, I worked on optimizing proxy URL filtering policies in the **Zscaler Internet Access (ZIA)** platform.
+
+#### Project Highlights
+
+- Reviewed legacy proxy URL filtering rules containing large numbers of manually configured URLs.
+- Migrated eligible URLs into **cloud-managed Custom URL Categories in Zscaler**.
+- Updated proxy policies to reference cloud URL categories instead of maintaining large URL lists inside individual rules.
+- Validated policy behavior to ensure access control remained unchanged after migration.
+
+#### Outcome
+
+- Reduced proxy rule complexity and improved policy manageability.
+
+Example optimization:
+
