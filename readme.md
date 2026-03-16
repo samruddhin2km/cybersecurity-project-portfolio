@@ -187,7 +187,7 @@ Proactive threat hunting plays a critical role in validating security posture, i
 
 ---
 
-## 3. SOAR Automation (D3 Security)
+## 3. SOAR Automation
 
 ### Overview
 
