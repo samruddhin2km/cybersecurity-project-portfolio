@@ -4,6 +4,30 @@ This repository documents my experience working in enterprise Security Operation
 
 The objective of this repository is to provide an overview of real-world cybersecurity operations, security platform administration, compliance verification, and incident investigation activities performed in an enterprise environment.
 
+## Security Tools & Platforms
+
+- Forcepoint DLP (Email Protector, Endpoint Protector)
+- Microsoft Purview DLP
+- Tenable Nessus
+- Zscaler Internet Access (ZIA)
+- D3 Security SOAR
+- Digital Shadows
+- LastPass Enterprise
+- SIEM Platforms (Splunk, QRadar, Exabeam, Google Chronicle)
+- ANY.RUN Malware Sandbox
+
+
+## Core Security Capabilities
+
+- SOC Operations (L1 / L2 / L3)
+- Incident Response
+- Threat Hunting
+- SOAR Automation
+- Data Loss Prevention
+- Vulnerability Management
+- Malware Analysis
+- Detection Engineering
+
 ## Table of Contents
 
 - [Data Loss Prevention (Forcepoint DLP)](#1-data-loss-prevention-forcepoint-dlp)
