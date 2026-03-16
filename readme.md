@@ -1,5 +1,10 @@
 # Cybersecurity Project Portfolio
 
+![SOC](https://img.shields.io/badge/SOC-Operations-blue)
+![Threat Hunting](https://img.shields.io/badge/Threat-Hunting-red)
+![SOAR](https://img.shields.io/badge/SOAR-Automation-green)
+![DLP](https://img.shields.io/badge/DLP-Forcepoint-orange)
+
 This repository documents my experience working in enterprise Security Operations and Security Control Administration (SCA). It highlights practical work across multiple security platforms including Data Loss Prevention, Threat Hunting, SOAR automation, Vulnerability Management, SIEM administration, and enterprise security tools.
 
 The objective of this repository is to provide an overview of real-world cybersecurity operations, security platform administration, compliance verification, and incident investigation activities performed in an enterprise environment.
@@ -744,3 +749,9 @@ Examples of alerts handled include:
 These alerts were investigated by analysing logs, verifying indicators of compromise, validating user activity and coordinating with infrastructure teams when remediation actions were required. 
 
 ---
+
+## About This Portfolio
+
+This repository showcases real-world cybersecurity operational work performed across enterprise environments including security incident investigations, threat hunting exercises, automation development, and security control administration.
+
+Sensitive organizational information has been removed while preserving the technical investigation methodology.
