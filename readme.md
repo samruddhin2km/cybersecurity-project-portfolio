@@ -504,18 +504,73 @@ The vulnerability management process helped ensure that:
 
 ### Zscaler Proxy – URL Policy Optimization Project
 
-As part of Security Control Administration, I worked on optimizing proxy URL filtering policies in the **Zscaler Internet Access (ZIA)** platform.
+Worked on optimizing proxy URL filtering policies within the Zscaler Internet Access (ZIA) platform.
 
-#### Project Highlights
+**Project Highlights**
 
-- Reviewed legacy proxy URL filtering rules containing large numbers of manually configured URLs.
-- Migrated eligible URLs into **cloud-managed Custom URL Categories in Zscaler**.
-- Updated proxy policies to reference cloud URL categories instead of maintaining large URL lists inside individual rules.
-- Validated policy behavior to ensure access control remained unchanged after migration.
+- Reviewed existing proxy URL filtering rules containing large numbers of manually configured URLs.
+- Migrated eligible URLs into **cloud-managed Custom URL Categories** within Zscaler.
+- Updated proxy policies to reference cloud URL categories instead of maintaining large URL lists directly in rules.
+- Validated that access behaviour remained unchanged after migration.
 
-#### Outcome
+**Outcome**
 
-- Reduced proxy rule complexity and improved policy manageability.
+- Reduced proxy rule complexity and improved maintainability.
 
 Example optimization:
+
+Proxy URL rules before optimization: ~120  
+Proxy URL rules after migration: ~45  
+
+- Simplified policy management and improved scalability of URL filtering controls.
+
+---
+
+### Digital Shadows – External Threat Intelligence Monitoring
+
+Digital Shadows was used for monitoring external cyber threats related to the organization’s digital footprint.
+
+**Operational Activities**
+
+- Monitored alerts related to credential exposure, brand abuse, and domain impersonation.
+- Investigated alerts indicating potential leaked credentials or exposed accounts on external platforms.
+- Reviewed threat intelligence alerts related to company domains and possible phishing infrastructure.
+- Validated alerts to determine whether they represented genuine risks or false positives.
+- Escalated relevant findings to internal security teams for further investigation.
+- Documented investigation outcomes and tracked remediation actions.
+
+This monitoring helped detect potential external threats targeting the organization.
+
+---
+
+### SIEM Platform – Proof of Concept (POC)
+
+Participated in a SIEM proof-of-concept initiative to evaluate centralized logging and monitoring capabilities.
+
+**Activities**
+
+- Assisted in reviewing SIEM platform requirements and evaluation criteria.
+- Tested ingestion of security logs from multiple infrastructure sources.
+- Validated visibility across authentication events, endpoint activity, and network logs.
+- Assisted in identifying potential detection use cases for implementation.
+- Documented observations and findings from the evaluation process.
+
+The POC helped assess the effectiveness of the SIEM platform for improving centralized security monitoring.
+
+---
+
+### LastPass Enterprise Password Manager
+
+Supported operational administration and troubleshooting of the LastPass enterprise password management platform.
+
+**Operational Activities**
+
+- Assisted users with account activation and login troubleshooting.
+- Investigated issues where shared password updates were not syncing across shared folders and performed vault refresh operations.
+- Helped resolve login issues related to browser extensions and authentication errors.
+- Assisted in unlocking or reactivating user accounts when required.
+- Supported cases where user email IDs were updated and ensured account synchronization after the change.
+- Assisted in resetting master passwords through the administrative console when required. :contentReference[oaicite:0]{index=0}
+
+These operational activities helped ensure reliable access to enterprise password management services.
 
