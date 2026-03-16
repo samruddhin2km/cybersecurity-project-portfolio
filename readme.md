@@ -500,7 +500,7 @@ The vulnerability management process helped ensure that:
 
 ---
 
-## 5. Security Control Administration (SCA)
+## 5. Security Control Administration
 
 ### Zscaler Proxy – URL Policy Optimization Project
 
