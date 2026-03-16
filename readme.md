@@ -543,7 +543,7 @@ This monitoring helped detect potential external threats targeting the organizat
 
 ---
 
-### SIEM Platform – Proof of Concept (POC)
+### SIEM Platform (Chronicle) – Proof of Concept (POC)
 
 Participated in a SIEM proof-of-concept initiative to evaluate centralized logging and monitoring capabilities.
 
