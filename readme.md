@@ -10,8 +10,7 @@ The objective of this repository is to provide an overview of real-world cyberse
 2. [Threat Hunting](#2-threat-hunting)
 3. [SOAR Automation](#3-soar-automation)
 4. [Vulnerability Management](#4-vulnerability-management)
-5. [SIEM Administration](#5-siem-administration)
-6. [Security Control Administration](#6-security-control-administration)
+5. [Security Control Administration](#5-security-control-administration)
 
 ## 1. Data Loss Prevention (Forcepoint DLP)
 
@@ -355,3 +354,145 @@ The implementation of these SOAR playbooks helped achieve:
 - Improved efficiency in enrichment and threat intelligence correlation.
 - Reduced manual effort for security analysts.
 - Better documentation and tracking of incident response activities.
+
+
+---
+
+## 4. Vulnerability Management
+
+### Overview
+
+As part of Security Operations, I was responsible for supporting the vulnerability management process across enterprise systems. The objective of this process was to continuously identify security weaknesses in infrastructure and coordinate remediation before they could be exploited.
+
+Vulnerability discovery and analysis were performed using **Tenable Nessus**, with separate scanning platforms used for **cloud environments and on-premise infrastructure**.
+
+The vulnerability management process followed a lifecycle approach consisting of:
+
+- Discovery
+- Assessment
+- Prioritization
+- Remediation coordination
+- Verification
+
+This ensured that vulnerabilities across the enterprise environment were continuously monitored and addressed in a structured manner.
+
+---
+
+### Vulnerability Discovery and Scan Management
+
+Regular vulnerability scans were scheduled across multiple asset categories to ensure complete coverage of enterprise systems.
+
+Different device categories had **different scan schedules and time windows** depending on operational impact and maintenance requirements. These included:
+
+- Windows servers
+- Linux servers
+- Employee workstations
+- Network infrastructure devices (firewalls, routers, load balancers)
+- Public-facing systems
+- Cloud infrastructure
+
+After each scan cycle, the Tenable Nessus dashboard was reviewed to confirm:
+
+- Whether the scan completed successfully
+- If authentication worked correctly for agent-based scans
+- Whether all assets were scanned as expected
+- Whether any new vulnerabilities were discovered
+
+If a scan failed or did not complete successfully, the issue was investigated and the scan was rescheduled to ensure full coverage.
+
+---
+
+### Vulnerability Assessment and Prioritisation
+
+Once vulnerabilities were detected, they were analysed and prioritised based on several factors:
+
+- Vulnerability severity score
+- Exposure level of the asset (public vs internal)
+- Business criticality of the system
+- Threat intelligence indicating active exploitation
+
+Critical vulnerabilities were prioritised for immediate remediation, while lower severity vulnerabilities were handled during the normal patching cycle.
+
+The Tenable **Vulnerability Priority Rating (VPR)** was also considered when determining the urgency of remediation.
+
+---
+
+### Coordination with Remediation Teams
+
+Once validated, vulnerabilities were communicated to the appropriate infrastructure teams responsible for remediation.
+
+This typically required coordination with teams such as:
+
+- Network operations team
+- Server infrastructure teams
+- Microsoft services team
+- Platform engineering teams
+
+Remediation actions could include:
+
+- Applying vendor security patches
+- Upgrading or replacing vulnerable software
+- Modifying system configurations
+- Removing unsupported or outdated software
+
+Weekly vulnerability review meetings were conducted to track remediation progress and discuss newly identified high-risk vulnerabilities.
+
+---
+
+### Example: Microsoft Outlook Zero-Day Vulnerability
+
+During one vulnerability monitoring cycle, a critical vulnerability related to **Microsoft Outlook** was identified through the Tenable Nessus dashboard.
+
+The vulnerability was detected using **Nessus Plugin ID 187315**, associated with **CVE-2023-23397**, a Microsoft Outlook vulnerability that could allow attackers to exploit authentication mechanisms and potentially gain unauthorized access.
+
+Due to its severity and the fact that it was being actively discussed as a zero-day vulnerability at the time, the issue was treated as a **Priority 1 (P1) vulnerability event**.
+
+The investigation involved:
+
+- Reviewing vulnerability scan results across enterprise assets
+- Identifying systems potentially affected by the vulnerability
+- Coordinating with the **Microsoft infrastructure team**
+- Monitoring vendor advisories and security patch releases
+
+After validation, it was confirmed that **no enterprise assets were vulnerable**, but the Microsoft team ensured that the appropriate patches were applied as part of the security update cycle.
+
+This proactive monitoring ensured that the environment remained protected from a high-risk vulnerability even though no systems were directly impacted.
+
+---
+
+### Example: Firewall Vulnerability Identified via Nessus
+
+During a routine vulnerability scan, Tenable Nessus identified a vulnerability affecting a **network firewall device**.
+
+The vulnerability detection plugin indicated that the firewall firmware version contained known security weaknesses.
+
+The investigation process included:
+
+- Reviewing vulnerability details and affected devices in the Nessus dashboard
+- Validating the vulnerability against the deployed firewall firmware
+- Coordinating with the **network operations team**
+
+The networking team performed remediation by upgrading the firewall firmware and applying the recommended configuration updates.
+
+A follow-up vulnerability scan confirmed that the issue was successfully resolved and the vulnerability was no longer detected.
+
+---
+
+### Verification
+
+Once remediation actions were completed, affected systems were rescanned to confirm that vulnerabilities had been successfully resolved.
+
+If a vulnerability continued to appear in subsequent scans, further investigation was performed and additional remediation steps were coordinated with the relevant teams.
+
+This verification step ensured that remediation actions were effective and that vulnerabilities were fully eliminated from the environment.
+
+---
+
+### Outcome
+
+The vulnerability management process helped ensure that:
+
+- Security weaknesses across enterprise systems were continuously monitored
+- Critical vulnerabilities were prioritised and remediated quickly
+- Cross-team coordination improved remediation efficiency
+- Regular scanning and verification maintained a strong security posture across both cloud and on-premise infrastructure
