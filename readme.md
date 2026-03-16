@@ -11,6 +11,7 @@ The objective of this repository is to provide an overview of real-world cyberse
 3. [SOAR Automation](#3-soar-automation)
 4. [Vulnerability Management](#4-vulnerability-management)
 5. [Security Control Administration](#5-security-control-administration)
+6. [SOC Operations Experience (L1 / L2 / L3 Analyst)](#6-soc-operations-experience-l1--l2--l3-analyst)
 
 ## 1. Data Loss Prevention (Forcepoint DLP)
 
@@ -574,3 +575,108 @@ Supported operational administration and troubleshooting of the LastPass enterpr
 
 These operational activities helped ensure reliable access to enterprise password management services.
 
+
+---
+
+## 6. SOC Operations Experience (L1 / L2 / L3 Analyst)
+
+Worked as part of the Security Operations Center performing alert triage, investigation, incident response, and threat validation across multiple security platforms including SIEM, EDR, DLP, proxy and email security systems.
+
+### Email Delivery Delay Investigation (Forcepoint Email Protector)
+
+Investigated a reported issue where multiple users experienced delays in receiving emails during a holiday period.
+
+**Investigation Summary**
+
+- Analysed mail flow logs and Forcepoint Email Protector events.
+- Identified that the Email Protector temporarily lost connection with the Exchange server which caused emails to queue within the protector.
+- The retry mechanism of the mail delivery service gradually attempted re-delivery, resulting in delayed email delivery.
+- Once the Exchange server connection was restored, queued emails were delivered successfully.
+
+**Action Taken**
+
+- Worked with the platform team to implement monitoring for repeated connection failures.
+- A detection rule was created to alert when repeated deferred delivery events occur within a specific time window.
+
+This helped ensure faster detection if similar issues occur in the future.
+
+---
+
+### Incident Investigation – Suspicious Data Transfer Activity
+
+Investigated a high severity alert related to possible sensitive data transfer from an endpoint device.
+
+**Investigation Approach**
+
+- Reviewed endpoint activity timeline and system process logs.
+- Identified that a compressed archive file containing multiple documents was created and transferred to an external network share.
+- Observed file compression activity followed by network authentication and connection to a remote storage path.
+- Verified the destination IP and network path with infrastructure teams.
+
+Further analysis showed the destination network was associated with a personal router connected to the corporate network, which enabled file transfer through Windows file sharing. :contentReference[oaicite:0]{index=0}  
+
+**Outcome**
+
+- Confirmed that the activity was initiated from the user device and not caused by malware.
+- Escalated findings to relevant teams due to potential data exposure risk.
+
+---
+
+### Malware Behaviour Analysis
+
+Conducted analysis to evaluate endpoint protection effectiveness against potentially malicious files.
+
+**Testing Scenario**
+
+- A simulated malicious file was executed on a test system to observe system behaviour.
+- The file downloaded additional scripts from a remote server and executed multiple actions such as system information collection and data transfer activity.
+
+The objective was to determine whether the endpoint protection solution would detect these behaviours during execution. :contentReference[oaicite:1]{index=1}  
+
+**Key Observations**
+
+- Certain variants of the file executed without immediate detection.
+- When the file hash became known to threat intelligence sources, detection improved.
+
+This exercise helped evaluate security monitoring visibility and identify potential detection gaps.
+
+---
+
+### Malware Sandbox Investigation (ANY.RUN)
+
+Performed sandbox analysis using **ANY.RUN** to investigate suspicious executable files received through email alerts.
+
+**Analysis Steps**
+
+- Uploaded suspicious file samples to the sandbox environment.
+- Observed process execution behaviour, network connections, and file system changes.
+- Identified indicators such as unusual PowerShell activity and outbound connections to external infrastructure.
+- Extracted file hashes, domains, and IP indicators from the sandbox analysis.
+
+The results helped determine whether the file was malicious and whether any additional security actions were required.
+
+---
+
+### Security Alerts Investigated
+
+Throughout SOC operations, investigated a wide range of alerts generated from multiple security technologies including SIEM, endpoint security, network security and cloud monitoring platforms.
+
+Examples of alerts handled include:
+
+- Windows Multiple Login Failures  
+- Inbound Traffic Towards Vulnerable Ports  
+- Azure Access From Suspicious Country  
+- VPN Multiple Access Deny From Same Source  
+- Trojan Infection Detected  
+- Password Stealer Detection  
+- Potentially Unwanted Software Detection  
+- Suspicious PowerShell Command Execution  
+- Endpoint Malware Detection Alerts  
+- Cisco ASA Vertical Port Scan Detected  
+- Cisco ASA Configuration Change  
+- Azure Login From Blacklisted IP  
+- Blacklisted IP Communication Observed  
+
+These alerts were investigated by analysing logs, verifying indicators of compromise, validating user activity and coordinating with infrastructure teams when remediation actions were required. 
+
+---
