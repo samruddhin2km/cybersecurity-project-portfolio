@@ -183,3 +183,175 @@ The threat hunting exercises confirmed that:
 - Additional monitoring controls could further enhance early detection capabilities.
 
 Proactive threat hunting plays a critical role in validating security posture, identifying potential attack surfaces, and improving defensive monitoring capabilities even when no immediate indicators of compromise are detected.
+
+
+---
+
+## 3. SOAR Automation (D3 Security)
+
+### Overview
+
+As part of Security Operations, I independently designed and implemented multiple incident response playbooks within the **D3 Security SOAR platform**. These playbooks automated key steps in incident triage, enrichment, investigation, and response to improve response time and standardize investigation workflows.
+
+Each playbook incorporated automation for:
+
+- Capturing incident timestamps to measure **TTD (Time to Detect)** and **TTR (Time to Respond)**
+- Extracting indicators of compromise (IoCs)
+- Performing threat intelligence enrichment
+- Gathering contextual information from enterprise systems
+- Supporting analyst decision-making for remediation and incident closure
+
+The automation significantly improved investigation efficiency while maintaining consistency across different security incident types.
+
+---
+
+### Cyber Fraud Investigation Playbook
+
+This playbook was designed to investigate incidents related to **cyber fraud and brand abuse** affecting the organization.
+
+Key investigation steps included:
+
+- Capturing incident timestamps for TTD and TTR metrics.
+- Classifying incidents into categories such as:
+  - Phishing attempts
+  - Spoofed profiles
+  - Malicious mobile applications
+  - Brand misuse
+- Identifying threat vectors such as:
+  - Impersonating domains
+  - Spoofed social media profiles
+  - Email-based attacks
+  - Malicious mobile applications
+- Enriching investigation data using:
+  - Active Directory (AD)
+  - WHOIS records
+  - VirusTotal intelligence
+- Determining whether incidents represented **true positives or false positives**.
+- Initiating remediation actions either manually or through automation depending on tool capabilities.
+- Documenting findings and closing the incident ticket.
+
+---
+
+### DDoS Investigation Playbook
+
+A dedicated playbook was created to support automated investigation of **Distributed Denial-of-Service (DDoS) alerts**.
+
+The workflow included:
+
+- Capturing TTD and TTR metrics.
+- Extracting indicators of compromise such as:
+  - Source IP addresses
+  - Destination IP addresses
+  - Company public IP ranges
+- Enriching indicators using **AbuseIPDB** and other threat intelligence sources.
+- Determining whether alerts originated from monitoring platforms such as:
+  - Akamai priority alerts
+  - LogicMonitor DoS alerts
+- Assessing whether business services were impacted.
+- Supporting remediation actions including:
+  - Blocking malicious traffic
+  - Investigating additional mitigation strategies if traffic blocking was insufficient.
+
+---
+
+### Malware Investigation Playbook
+
+This playbook automated initial triage and investigation of malware-related alerts.
+
+Key activities included:
+
+- Identifying the **alert source and context**.
+- Enriching investigation data using OSINT sources such as VirusTotal.
+- Retrieving **Active Directory user details** associated with the affected system.
+- Collecting **process activity and system behavior** data from endpoints.
+- Correlating related alerts from security platforms including:
+  - Microsoft ATP
+  - Microsoft 365 security alerts
+- Executing **Microsoft 365 hunting queries** to retrieve endpoint activity.
+- Exporting investigation results and attaching them to incident records for documentation.
+- Categorizing the activity as:
+  - Malicious
+  - Suspicious
+  - Potentially unwanted process execution
+- Checking whether related activity was associated with existing **service requests in ServiceNow** to identify legitimate operational activity.
+- If malicious activity was confirmed:
+  - Identifying whether sensitive data may have been involved.
+  - Conducting further investigation through sandbox dynamic analysis.
+  - Performing deeper analysis using a forensic investigation workstation.
+
+---
+
+### DLP Investigation Playbook
+
+A dedicated playbook was created to automate investigations related to **Data Loss Prevention incidents**.
+
+The workflow included:
+
+- Integrating with **Forcepoint Security Manager (FSM)** to retrieve event details.
+- Collecting contextual information about suspected data transfer attempts.
+- Categorizing the method of attempted data transfer such as:
+  - Email
+  - Web browser
+  - USB storage
+  - Cloud applications
+  - Chat platforms
+  - Printing activity
+- Determining whether data transfer attempts were **blocked or successful**.
+- Assigning incident priority based on risk level.
+- Supporting remediation actions including **policy adjustments or enforcement verification**.
+
+---
+
+### Additional Playbooks Implemented
+
+In addition to the core playbooks above, several other automated investigation workflows were developed to support security operations, including:
+
+- Unusual behavior investigation
+- Potential hacking activity alerts
+- Data leakage incidents
+- Phishing investigations
+- Zero-day incident response workflows
+
+These playbooks helped standardize incident response processes across multiple security scenarios.
+
+---
+
+### Custom Automation Scripts
+
+To support these playbooks, multiple custom scripts were developed within the SOAR platform to automate enrichment and data processing tasks.
+
+Examples of automation capabilities included:
+
+- Identifying whether users belonged to specific **Active Directory groups**.
+- Summarizing **AD sign-in events** based on:
+  - Application
+  - Logon type
+  - Device name
+  - Operating system
+  - Authentication method
+  - Source IP address
+  - Geographic location
+- Retrieving the **last password change timestamp** for user accounts.
+- Identifying **critical vulnerabilities present on assets**.
+- Retrieving process activity data from endpoint systems.
+- Summarizing **device file activity events**.
+- Extracting unique values from structured data fields.
+- Searching email activity based on:
+  - Sender
+  - Recipient
+  - Subject
+- Parsing URLs and extracting relevant indicators using string processing techniques.
+
+These automation scripts significantly enhanced the efficiency of the investigation workflows by reducing manual analysis effort and enabling faster incident triage.
+
+---
+
+### Outcome
+
+The implementation of these SOAR playbooks helped achieve:
+
+- Faster incident triage and investigation.
+- Standardized investigation procedures across different incident types.
+- Improved efficiency in enrichment and threat intelligence correlation.
+- Reduced manual effort for security analysts.
+- Better documentation and tracking of incident response activities.
