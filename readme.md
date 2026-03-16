@@ -199,6 +199,30 @@ The threat hunting exercises confirmed that:
 
 Proactive threat hunting plays a critical role in validating security posture, identifying potential attack surfaces, and improving defensive monitoring capabilities even when no immediate indicators of compromise are detected.
 
+### Additional Threat Hunting Activities
+
+Apart from the FIN7 and Akira ransomware investigations, additional proactive threat hunting exercises were conducted to identify potential exposure to other malware families.
+
+Similar hunts were carried out for:
+
+- **Windows Info Stealer Malware**
+- **Automatic macOS Stealer**
+
+These hunts involved reviewing endpoint telemetry, authentication logs, process execution activity, and network connections to identify indicators commonly associated with credential theft and data exfiltration techniques.
+
+To strengthen detection capability, **custom hunting queries and monitoring rules were created** to identify suspicious behaviors related to these threats.
+
+Although no malicious activity was identified during these hunts, the investigations helped the team better understand how credential stealing malware operates and how attackers may attempt to exfiltrate sensitive information.
+
+**Key outcomes from these hunts included:**
+
+- Creation of additional detection queries and monitoring rules to identify suspicious activity early.
+- Improved understanding of credential theft techniques used by information stealers.
+- Recommendation to increase **security awareness among users** regarding credential harvesting attacks.
+- Recommendation to **enforce Multi-Factor Authentication (MFA)** for external-facing services and client access wherever possible.
+
+Even though no direct compromise was identified, these threat hunting activities provided valuable insights that helped further **strengthen and harden security controls within the environment**.
+
 
 ---
 
