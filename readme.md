@@ -6,12 +6,27 @@ The objective of this repository is to provide an overview of real-world cyberse
 
 ## Table of Contents
 
-1. [Data Loss Prevention (Forcepoint DLP)](#1-data-loss-prevention-forcepoint-dlp)
-2. [Threat Hunting](#2-threat-hunting)
-3. [SOAR Automation](#3-soar-automation)
-4. [Vulnerability Management](#4-vulnerability-management)
-5. [Security Control Administration](#5-security-control-administration)
-6. [SOC Operations Experience (L1 / L2 / L3 Analyst)](#6-soc-operations-experience-l1--l2--l3-analyst)
+- [Data Loss Prevention (Forcepoint DLP)](#1-data-loss-prevention-forcepoint-dlp)
+
+- [Threat Hunting](#2-threat-hunting)
+  - [FIN7 Threat Hunting](#fin7-threat-hunting)
+  - [Akira Ransomware Threat Hunting](#akira-ransomware-threat-hunting)
+
+- [SOAR Automation](#3-soar-automation)
+  - [Cyber Fraud Playbook](#cyber-fraud-playbook)
+  - [DDoS Incident Response Playbook](#ddos-incident-response-playbook)
+  - [Malware Investigation Playbook](#malware-investigation-playbook)
+  - [DLP Incident Response Playbook](#dlp-incident-response-playbook)
+
+- [Vulnerability Management](#4-vulnerability-management)
+
+- [Security Control Administration](#5-security-control-administration-sca)
+
+- [SOC Operations Experience (L1 / L2 / L3 Analyst)](#6-soc-operations-experience-l1--l2--l3-analyst)
+  - [Email Delivery Delay Investigation](#email-delivery-delay-investigation-forcepoint-email-protector)
+  - [Suspicious Data Transfer Investigation](#incident-investigation--suspicious-data-transfer-activity)
+  - [Malware Behaviour Analysis](#malware-behaviour-analysis)
+  - [Malware Sandbox Investigation](#malware-sandbox-investigation-anyrun)
 
 ## 1. Data Loss Prevention (Forcepoint DLP)
 
