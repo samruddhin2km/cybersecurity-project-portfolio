@@ -57,6 +57,7 @@ The objective of this repository is to provide an overview of real-world cyberse
   - [Suspicious Data Transfer Investigation](#incident-investigation--suspicious-data-transfer-activity)
   - [Malware Behaviour Analysis](#malware-behaviour-analysis)
   - [Malware Sandbox Investigation](#malware-sandbox-investigation-anyrun)
+- [Data Loss Prevention – Ongoing Experience (Diksha Technologies)](#7-data-loss-prevention--ongoing-experience-diksha-technologies)
 
 ## 1. Data Loss Prevention (Forcepoint DLP)
 
@@ -749,7 +750,46 @@ Examples of alerts handled include:
 These alerts were investigated by analysing logs, verifying indicators of compromise, validating user activity and coordinating with infrastructure teams when remediation actions were required. 
 
 ---
+---
 
+## 7. Data Loss Prevention – Ongoing Experience (Diksha Technologies)
+
+### Overview
+
+Currently working on enterprise Data Loss Prevention (DLP) operations focusing on protecting sensitive data across endpoints, email, and cloud environments.
+
+### Key Responsibilities
+
+- Managing DLP solutions using **Forcepoint DLP** and **Microsoft Purview DLP**.
+- Creating and maintaining DLP policies for protecting sensitive data such as PII, financial data, and confidential business information.
+- Monitoring DLP incidents across multiple channels including:
+  - Email
+  - Web/Browser
+  - Endpoint (USB, file transfer)
+  - Cloud applications
+
+- Investigating DLP alerts to determine:
+  - Whether the activity is legitimate or suspicious
+  - If sensitive data exposure or exfiltration is involved
+
+- Performing **policy tuning and exception handling** to reduce false positives while maintaining strong enforcement.
+
+- Conducting periodic DLP reviews to ensure:
+  - Policies are properly configured
+  - Temporary exceptions are removed
+  - No unintended data bypass is occurring
+
+### Example Activities
+
+- Investigated multiple alerts involving attempted data transfer via email and external storage.
+- Analysed user behavior and validated whether the activity was business-related or a potential security risk.
+- Recommended policy improvements and monitoring enhancements based on findings.
+
+### Outcome
+
+- Improved visibility into sensitive data movement across enterprise systems.
+- Strengthened data protection controls through better policy tuning and monitoring.
+- Reduced false positives while maintaining effective DLP enforcement.
 ## About This Portfolio
 
 This repository showcases real-world cybersecurity operational work performed across enterprise environments including security incident investigations, threat hunting exercises, automation development, and security control administration.
